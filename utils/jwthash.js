@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser')
 exports.hashPassword = async(password,res)=>{
     try
     {
-        const hash = await bcrypt.hash(password,process.env.HASH_COUNT);
+        const hash = await bcrypt.hash(password,10);
             console.log(hash)
                return {
                     success:true,
