@@ -1,11 +1,11 @@
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
 
 exports.hashPassword = async(password,res)=>{
     try
     {
-        const hash = await bcrypt.hashSync(password,process.env.HASH_COUNT);
+        const hash = await bcrypt.hash(password,process.env.HASH_COUNT);
             console.log(hash)
                return {
                     success:true,
