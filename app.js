@@ -39,6 +39,6 @@ server.use('/api/v1/job',jobRouterexports.jobRouter)
 server.use('/api/v1/application',applicationRouterexports.applicationRouter)
 
 const PORT = process.env.PORT || 8080;
-server.listen(PORT, '0.0.0.0', () => {
+server.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}....`);
 });
