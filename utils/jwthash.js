@@ -37,7 +37,7 @@ exports.generateToken = async(user,res)=>{
         ),
         httpOnly:true,
         secure: process.env.NODE_ENV === 'production',
-        sameSite: 'Strict'
+        sameSite: 'None'
     };
     res.cookie("token",token,options).status(201).json({
          success:"true",
