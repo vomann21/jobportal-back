@@ -38,7 +38,7 @@ server.use('/api/v1/user',userRouterexports.userRouter)
 server.use('/api/v1/job',jobRouterexports.jobRouter)
 server.use('/api/v1/application',applicationRouterexports.applicationRouter)
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}....`);
 });
